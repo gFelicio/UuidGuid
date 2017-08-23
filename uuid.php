@@ -59,6 +59,8 @@
         /*
             *----------------------------------------------------------------------------------
             * Somewhat fake UUIDv4 OR another function to create version 4 UUIDs
+            * Somewhat fake because a TRUE v4 UUID have two fields set with predefined values
+            * This function randomizes every field in the generated UUID
             *----------------------------------------------------------------------------------
             * Generate XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX style unique id,
             * (8 letters)-(4 letters)-(4 letters)-(4 letters)-(12 letters)
