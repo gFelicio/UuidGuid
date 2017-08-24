@@ -17,8 +17,15 @@
         * Pseudo-random UUID
         * $v4uuid = UUID::v4();
         *
-        * ---------------------------------------------------------------------------------------
+        *       OR
         *
+        * UUID::v4();
+        * $uuid = UUID::v4();
+        *
+        *
+        * http://php.net/manual/en/language.oop5.static.php
+        *
+        * ---------------------------------------------------------------------------------------
     */
 
     class UUID
@@ -73,7 +80,7 @@
             *----------------------------------------------------------------------------------
         */
 
-        function guid()
+        public static function guid()
         {
             $salt = strtoupper(crypt(uniqid(mt_rand(),true)));
             $gen =
