@@ -1,8 +1,0 @@
-{
-    "name": "gFelicio/UuidGuid",
-    "autoload": {
-        "psr-0" : {
-            "gFelicio\\Uuid" : "src"
-        }
-    }
-}
