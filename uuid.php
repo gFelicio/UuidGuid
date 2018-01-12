@@ -62,35 +62,5 @@
             return preg_match('/^\{?[0-9a-f]{8}\-?[0-9a-f]{4}\-?[0-9a-f]{4}\-?'.
             '[0-9a-f]{4}\-?[0-9a-f]{12}\}?$/i', $uuid) === 1;
         }
-
-        /*
-            *----------------------------------------------------------------------------------
-            * Somewhat fake UUIDv4 OR another function to create version 4 UUIDs
-            * Somewhat fake because a TRUE v4 UUID have two fields set with predefined values
-            * This function randomizes every field in the generated UUID
-            *----------------------------------------------------------------------------------
-            * Generate XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX style unique id,
-            * (8 letters)-(4 letters)-(4 letters)-(4 letters)-(12 letters)
-            *----------------------------------------------------------------------------------
-            * USAGE
-            *----------------------------------------------------------------------------------
-            * $Guid = guid();
-            * echo $Guid;
-            * echo "<br>";
-            *----------------------------------------------------------------------------------
-        */
-
-        public static function guid()
-        {
-            $salt = strtoupper(crypt(uniqid(mt_rand(),true)));
-            $gen =
-            substr($salt,0,8) . '-' .
-            substr($salt,8,4) . '-' .
-            substr($salt,12,4). '-' .
-            substr($salt,16,4). '-' .
-            substr($salt,20);
-
-            return $gen;
-        }
     }
 ?>
